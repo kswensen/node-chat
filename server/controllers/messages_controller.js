@@ -3,8 +3,8 @@ let id = 0;
 
 module.exports = {
     create: (req, res)=> {
-        const {text, time} = req.body;
-        messages.push({id, text, time});
+        const {text, time, username} = req.body;
+        messages.push({id, text, time, username});
         id++;
         res.status(200).send(messages);
     },
